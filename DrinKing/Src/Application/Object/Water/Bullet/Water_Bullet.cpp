@@ -1,11 +1,10 @@
-#include "Milk_Bullet.h"
+#include "Water_Bullet.h"
 
-void Milk_Bullet::Update()
+void Water_Bullet::Update()
 {
 	if (!m_flg)return;
-	m_pos.x -= 3;
-
-	if (m_pos.x < -640 - 8)
+	m_pos.x += 5;
+	if (m_pos.x > 640 + 8)
 	{
 		m_flg = false;
 	}
@@ -15,14 +14,15 @@ void Milk_Bullet::Update()
 	m_mat = transMat;
 }
 
-void Milk_Bullet::Init()
+void Water_Bullet::Init()
 {
 	m_pos = {};
 	m_flg = false;
-	m_tex.Load("Asset/Textures/bullet_milktea.png");
+	m_tex.Load("Asset/Textures/bullet_water.png");
 	m_mat = Math::Matrix::Identity;
 }
 
-void Milk_Bullet::Release()
+void Water_Bullet::Release()
 {
+
 }

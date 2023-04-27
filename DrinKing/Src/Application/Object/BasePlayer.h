@@ -5,7 +5,7 @@ class BasePlayer
 {
 public:
 	BasePlayer() {};
-	~BasePlayer() { Release(); };
+	~BasePlayer() {};
 
 	//仮想関数
 	virtual void Update() = 0;
@@ -14,6 +14,9 @@ public:
 	virtual void Release();
 
 protected:
+	//移動量
+	static const int Move_val = 5;
+
 	//プレイヤー関係========================
 	//命名規則にキャメル型を採用
 	KdTexture m_tex;

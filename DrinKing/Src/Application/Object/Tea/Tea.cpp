@@ -7,18 +7,20 @@ void Tea::Update()
 	if (!m_flg)return;
 
 	m_cooltime++;
-	if (m_cooltime >= 30)
+	if (m_cooltime >= 90)
 	{
 		for (int i = 0; i < m_objList.size(); i++)
 		{
+			if (m_objList[i]->GetFlg())continue;
 			m_objList[i]->Shot(m_pos);
 			m_cooltime = 0;
+			break;
 		}
 	}
 
 	//ˆÚ“®================================
-	m_pos.x -= 1.5f;
-	if (m_pos.x < -320 - 16)
+	m_pos.x -= 3.0f;
+	if (m_pos.x < -640 - 32)
 	{
 		m_flg = false;
 	}
@@ -46,14 +48,19 @@ void Tea::Draw()
 
 	//©‹@‚Ì•`‰æ
 	KdShaderManager::Instance().m_spriteShader.SetMatrix(m_mat);
-	KdShaderManager::Instance().m_spriteShader.DrawTex(&m_tex, m_pos.x, m_pos.y, &rc);
+	KdShaderManager::Instance().m_spriteShader.DrawTex(&m_tex, 0,0, &rc);
 }
 
 void Tea::Init()
 {
 	std::shared_ptr<Tea_Bullet>teabullet;
-	teabullet = std::make_shared<Tea_Bullet>();
-	teabullet->Init();
+	for (int i = 0; i < BulletNum; i++)
+	{
+		teabullet = std::make_shared<Tea_Bullet>();
+		teabullet->Init();
+		m_objList.push_back(teabullet);
+	}
+	
 
 	//‰Šú‰»
 	m_tex.Load("Asset/Textures/tea.png");
@@ -61,7 +68,8 @@ void Tea::Init()
 	m_mat = Math::Matrix::Identity;
 	m_flg = false;
 	m_cooltime = 0;
-	m_objList.push_back(teabullet);
+
+	
 }
 
 void Tea::Release()
@@ -77,7 +85,7 @@ void Tea::Pop()
 		if (rand() % 150 < 1)
 		{
 			m_flg = true;
-			m_pos= { 320 + 16, (rand() % 250) - 150.0f};
+			m_pos= { 640 + 16, (rand() % 500) - 300.0f};
 		}
 	}
 }

@@ -237,14 +237,26 @@
     <ClInclude Include="Src\Application\Object\Beer\Bullet\Beer_Bullet.h">
       <Filter>Src\Application\Bullet\Beer</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Object\Player\Bullet\Player_Bullet.h">
-      <Filter>Src\Application\Bullet\Player</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Object\Tea\Bullet\Tea_Bullet.h">
       <Filter>Src\Application\Bullet\Tea</Filter>
     </ClInclude>
     <ClInclude Include="Src\Application\Object\MilkTea\Bullet\Milk_Bullet.h">
       <Filter>Src\Application\Bullet\MilkTea</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Water\Bullet\Water_Bullet.h">
+      <Filter>Src\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Cola\Cola.h">
+      <Filter>Src\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Water\Water.h">
+      <Filter>Src\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Sport\Sport.h">
+      <Filter>Src\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\BasePlayer.h">
+      <Filter>Src\Application</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -371,14 +383,26 @@
     <ClCompile Include="Src\Application\Object\Beer\Bullet\Beer_Bullet.cpp">
       <Filter>Src\Application\Bullet\Beer</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Player\Bullet\Player_Bullet.cpp">
-      <Filter>Src\Application\Bullet\Player</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\Tea\Bullet\Tea_Bullet.cpp">
       <Filter>Src\Application\Bullet\Tea</Filter>
     </ClCompile>
     <ClCompile Include="Src\Application\Object\MilkTea\Bullet\Milk_Bullet.cpp">
       <Filter>Src\Application\Bullet\MilkTea</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Water\Bullet\Water_Bullet.cpp">
+      <Filter>Src\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Water\Water.cpp">
+      <Filter>Src\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Cola\Cola.cpp">
+      <Filter>Src\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Sport\Sport.cpp">
+      <Filter>Src\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\BasePlayer.cpp">
+      <Filter>Src\Application</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

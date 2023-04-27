@@ -13,20 +13,22 @@ void Beer::Update()
 		m_deg = 0;
 	}
 	m_pos.y += 2 * sin(DirectX::XMConvertToRadians(m_deg));
-	m_pos.x -= 1;
-	if (m_pos.x < -320 - 16)
+	m_pos.x -= 2;
+	if (m_pos.x < -640 - 32)
 	{
 		m_flg = false;
 	}
 
 	m_cooltime++;
 
-	if (m_cooltime > 30)
+	if (m_cooltime > 90)
 	{
 		for (int i = 0; i < m_objList.size(); i++)
 		{
+			if (m_objList[i]->GetFlg())continue;
 			m_objList[i]->Shot(m_pos);
 			m_cooltime = 0;
+			break;
 		}
 	}
 
@@ -53,15 +55,19 @@ void Beer::Draw()
 
 	//©‹@‚Ì•`‰æ
 	KdShaderManager::Instance().m_spriteShader.SetMatrix(m_mat);
-	KdShaderManager::Instance().m_spriteShader.DrawTex(&m_tex, m_pos.x, m_pos.y, &rc);
+	KdShaderManager::Instance().m_spriteShader.DrawTex(&m_tex, 0, 0, &rc);
 }
 
 void Beer::Init()
 {
 	//’e‚Ì‰Šú‰»
 	std::shared_ptr<Beer_Bullet>beerbullet;
-	beerbullet = std::make_shared<Beer_Bullet>();
-	beerbullet->Init();
+	for (int i = 0; i < BulletNum; i++)
+	{
+		beerbullet = std::make_shared<Beer_Bullet>();
+		beerbullet->Init();
+		m_objList.push_back(beerbullet);
+	}
 	
 	//‰Šú‰»
 	m_tex.Load("Asset/Textures/Beer.png");
@@ -71,7 +77,7 @@ void Beer::Init()
 	m_flg = false;
 	m_cooltime = 0;
 
-	m_objList.push_back(beerbullet);
+	
 }
 
 void Beer::Release()
@@ -86,7 +92,7 @@ void Beer::Pop()
 	{
 		if (rand() % 150 < 1)
 		{
-			m_pos = { 320 + 16,(rand() % 200) - 100.0f };
+			m_pos = { 640 + 32,(rand() % 400) - 200.0f };
 			m_ang = rand() % 360;
 			m_flg = true;
 		}

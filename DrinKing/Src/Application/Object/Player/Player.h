@@ -2,14 +2,13 @@
 #include"../BaseObject.h"
 //子クラス
 
-class Player_Bullet;
-class KeyBord;
+class BasePlayer;
 
 enum Drink
 {
-	water,
-	cola,
-	sport
+	m_water,
+	m_cola,
+	m_sport
 };
 
 class Player:public BaseObject
@@ -23,14 +22,9 @@ public:
 	void Init()override;
 	void Release()override;
 private:
-	//移動量
-	static const int Move_val = 5;
 	Math::Rectangle rc = { 0,0,64,64 };
 	//モードチェンジ関係
-	KdTexture colaTex;
-	KdTexture sportTex;
 	Drink drink;
-	
-	static const int BulletNum = 10;
-	std::vector<std::shared_ptr<Player_Bullet>>m_objList;
+
+	std::vector<std::shared_ptr<BasePlayer>>m_objList;
 };

@@ -12,6 +12,7 @@ public:
 	virtual void Release();
 	//”­Ë
 	virtual void Shot(Math::Vector3 a_pos);
+	virtual bool GetFlg() { return m_flg; }
 
 protected:
 	//ƒvƒŒƒCƒ„[ŠÖŒW========================

@@ -35,22 +35,22 @@ void GameScene::Init()
 	player->Init();
 
 	//‚¨’ƒ“G‚Ì‰Šú‰»
-	std::shared_ptr<Tea>tea[Tea_Num];
+	std::shared_ptr<Tea>tea;
 	for (int i = 0; i < Tea_Num; i++)
 	{
-		tea[i] = std::make_shared<Tea>();
-		tea[i]->Init();
-		m_objList.push_back(tea[i]);
+		tea = std::make_shared<Tea>();
+		tea->Init();
+		m_objList.push_back(tea);
 	}
 	
 
 	//ƒr[ƒ‹‚Ì‰Šú‰»
-	std::shared_ptr<Beer>beer[Beer_Num];
+	std::shared_ptr<Beer>beer;
 	for (int i = 0; i < Beer_Num; i++)
 	{
-		beer[i] = std::make_shared<Beer>();
-		beer[i]->Init();
-		m_objList.push_back(beer[i]);
+		beer = std::make_shared<Beer>();
+		beer->Init();
+		m_objList.push_back(beer);
 	}
 
 	std::shared_ptr<Milk>milk;

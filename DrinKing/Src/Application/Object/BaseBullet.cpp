@@ -5,7 +5,7 @@ void BaseBullet::Draw()
 	if (!m_flg)return;
 	//Ž©‹@‚Ì•`‰æ
 	KdShaderManager::Instance().m_spriteShader.SetMatrix(m_mat);
-	KdShaderManager::Instance().m_spriteShader.DrawTex(&m_tex, m_pos.x, m_pos.y);
+	KdShaderManager::Instance().m_spriteShader.DrawTex(&m_tex, 0, 0);
 }
 
 void BaseBullet::Release()

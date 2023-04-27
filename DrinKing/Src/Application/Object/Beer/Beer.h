@@ -20,4 +20,6 @@ private:
 
 	//•Ûç«E‰Â“Ç«E”Ä—p«
 	std::vector<std::shared_ptr<Beer_Bullet>>m_objList;
+
+	static const int BulletNum = 10;
 };

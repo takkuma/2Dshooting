@@ -2,7 +2,6 @@
 
 void BasePlayer::Draw()
 {
-
 }
 
 void BasePlayer::Release()

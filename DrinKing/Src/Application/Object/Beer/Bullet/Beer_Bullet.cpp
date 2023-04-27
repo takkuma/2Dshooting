@@ -5,7 +5,7 @@ void Beer_Bullet::Update()
 	if (!m_flg)return;
 	m_pos.x -= 5;
 
-	if (m_pos.x < -320 - 8)
+	if (m_pos.x < -640 - 8)
 	{
 		m_flg = false;
 	}
