@@ -12,7 +12,11 @@ public:
 	virtual void Draw();
 	virtual void Init() = 0;
 	virtual void Release();
+	virtual void UpdateMat(Math::Matrix a_mat);
+	virtual Math::Matrix GetMat() { return m_mat; }
 
+	virtual Math::Vector3 GetPos() { return m_pos; }
+	virtual void SetPos(Math::Vector3 a_pos) { m_pos = a_pos; }
 protected:
 	//ˆÚ“®—Ê
 	static const int Move_val = 5;

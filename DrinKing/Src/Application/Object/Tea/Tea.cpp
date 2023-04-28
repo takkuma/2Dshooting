@@ -67,7 +67,7 @@ void Tea::Init()
 	m_pos = { 0, 0, 0};
 	m_mat = Math::Matrix::Identity;
 	m_flg = false;
-	m_cooltime = 0;
+	m_cooltime = 90;
 
 	
 }

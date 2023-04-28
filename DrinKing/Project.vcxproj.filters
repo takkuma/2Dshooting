@@ -91,6 +91,30 @@
     <Filter Include="Src\Application\Bullet\MilkTea">
       <UniqueIdentifier>{dba66512-be0a-4d8b-a865-02b1ac49a8af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\Object\Player\Cola">
+      <UniqueIdentifier>{f2678148-d035-48f2-93d4-3319104bdb91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Player\Sport">
+      <UniqueIdentifier>{1fbb3849-b4bd-4ca0-8871-7fc0769ca75d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Object\Player\Water">
+      <UniqueIdentifier>{a60a7b20-9e33-4c97-96cb-a4cd39e006f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Bullet\Player\Water">
+      <UniqueIdentifier>{e62227f5-4e07-49f6-ae2e-804ef08d6cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Bullet\Player\Cola">
+      <UniqueIdentifier>{51966e43-83d6-48d8-8e46-0bab74a59f97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Bullet\Player\Sport">
+      <UniqueIdentifier>{4e96af96-cd86-46fb-a973-a695eeda13c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Scene\GameScene">
+      <UniqueIdentifier>{3b9c8101-e1ad-476a-856e-4c4356be5363}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Scene\TitleScene">
+      <UniqueIdentifier>{6b101349-ef41-4e7f-848c-c9a9a435c81c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -228,9 +252,6 @@
     <ClInclude Include="Src\Application\Object\MilkTea\MilkTea.h">
       <Filter>Src\Application\Object\MilkTea</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h">
-      <Filter>Src\Application\Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Object\BaseBullet.h">
       <Filter>Src\Application\Bullet</Filter>
     </ClInclude>
@@ -243,20 +264,29 @@
     <ClInclude Include="Src\Application\Object\MilkTea\Bullet\Milk_Bullet.h">
       <Filter>Src\Application\Bullet\MilkTea</Filter>
     </ClInclude>
-    <ClInclude Include="Src\Application\Object\Water\Bullet\Water_Bullet.h">
-      <Filter>Src\Application</Filter>
-    </ClInclude>
     <ClInclude Include="Src\Application\Object\Cola\Cola.h">
-      <Filter>Src\Application</Filter>
-    </ClInclude>
-    <ClInclude Include="Src\Application\Object\Water\Water.h">
-      <Filter>Src\Application</Filter>
+      <Filter>Src\Application\Object\Player\Cola</Filter>
     </ClInclude>
     <ClInclude Include="Src\Application\Object\Sport\Sport.h">
-      <Filter>Src\Application</Filter>
+      <Filter>Src\Application\Object\Player\Sport</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Water\Water.h">
+      <Filter>Src\Application\Object\Player\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Water\Bullet\Water_Bullet.h">
+      <Filter>Src\Application\Bullet\Player\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Cola\Bullet\Cola_Bullet.h">
+      <Filter>Src\Application\Bullet\Player\Cola</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Object\Sport\Bullet\Sport_Bullet.h">
+      <Filter>Src\Application\Bullet\Player\Sport</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h">
+      <Filter>Src\Application\Scene\GameScene</Filter>
     </ClInclude>
     <ClInclude Include="Src\Application\Object\BasePlayer.h">
-      <Filter>Src\Application</Filter>
+      <Filter>Src\Application\Object\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -374,9 +404,6 @@
     <ClCompile Include="Src\Application\Object\Milktea\MilkTea.cpp">
       <Filter>Src\Application\Object\MilkTea</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp">
-      <Filter>Src\Application\Scene</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\BaseBullet.cpp">
       <Filter>Src\Application\Bullet</Filter>
     </ClCompile>
@@ -389,20 +416,29 @@
     <ClCompile Include="Src\Application\Object\MilkTea\Bullet\Milk_Bullet.cpp">
       <Filter>Src\Application\Bullet\MilkTea</Filter>
     </ClCompile>
-    <ClCompile Include="Src\Application\Object\Water\Bullet\Water_Bullet.cpp">
-      <Filter>Src\Application</Filter>
-    </ClCompile>
-    <ClCompile Include="Src\Application\Object\Water\Water.cpp">
-      <Filter>Src\Application</Filter>
-    </ClCompile>
     <ClCompile Include="Src\Application\Object\Cola\Cola.cpp">
-      <Filter>Src\Application</Filter>
+      <Filter>Src\Application\Object\Player\Cola</Filter>
     </ClCompile>
     <ClCompile Include="Src\Application\Object\Sport\Sport.cpp">
-      <Filter>Src\Application</Filter>
+      <Filter>Src\Application\Object\Player\Sport</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Water\Water.cpp">
+      <Filter>Src\Application\Object\Player\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Water\Bullet\Water_Bullet.cpp">
+      <Filter>Src\Application\Bullet\Player\Water</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Cola\Bullet\Cola_Bullet.cpp">
+      <Filter>Src\Application\Bullet\Player\Cola</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Object\Sport\Bullet\Sport_Bullet.cpp">
+      <Filter>Src\Application\Bullet\Player\Sport</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp">
+      <Filter>Src\Application\Scene\GameScene</Filter>
     </ClCompile>
     <ClCompile Include="Src\Application\Object\BasePlayer.cpp">
-      <Filter>Src\Application</Filter>
+      <Filter>Src\Application\Object\Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

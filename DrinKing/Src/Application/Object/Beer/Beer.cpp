@@ -75,7 +75,7 @@ void Beer::Init()
 	m_mat = Math::Matrix::Identity;
 	m_deg = 0;
 	m_flg = false;
-	m_cooltime = 0;
+	m_cooltime = 90;
 
 	
 }

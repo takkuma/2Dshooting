@@ -150,10 +150,12 @@
     <ClInclude Include="Src\Application\Object\BasePlayer.h" />
     <ClInclude Include="Src\Application\Object\Beer\Beer.h" />
     <ClInclude Include="Src\Application\Object\Beer\Bullet\Beer_Bullet.h" />
+    <ClInclude Include="Src\Application\Object\Cola\Bullet\Cola_Bullet.h" />
     <ClInclude Include="Src\Application\Object\Cola\Cola.h" />
     <ClInclude Include="Src\Application\Object\MilkTea\Bullet\Milk_Bullet.h" />
     <ClInclude Include="Src\Application\Object\MilkTea\MilkTea.h" />
     <ClInclude Include="Src\Application\Object\Player\Player.h" />
+    <ClInclude Include="Src\Application\Object\Sport\Bullet\Sport_Bullet.h" />
     <ClInclude Include="Src\Application\Object\Sport\Sport.h" />
     <ClInclude Include="Src\Application\Object\Tea\Bullet\Tea_Bullet.h" />
     <ClInclude Include="Src\Application\Object\Tea\Tea.h" />
@@ -202,10 +204,12 @@
     <ClCompile Include="Src\Application\Object\BasePlayer.cpp" />
     <ClCompile Include="Src\Application\Object\Beer\Beer.cpp" />
     <ClCompile Include="Src\Application\Object\Beer\Bullet\Beer_Bullet.cpp" />
+    <ClCompile Include="Src\Application\Object\Cola\Bullet\Cola_Bullet.cpp" />
     <ClCompile Include="Src\Application\Object\Cola\Cola.cpp" />
     <ClCompile Include="Src\Application\Object\MilkTea\Bullet\Milk_Bullet.cpp" />
     <ClCompile Include="Src\Application\Object\Milktea\MilkTea.cpp" />
     <ClCompile Include="Src\Application\Object\Player\Player.cpp" />
+    <ClCompile Include="Src\Application\Object\Sport\Bullet\Sport_Bullet.cpp" />
     <ClCompile Include="Src\Application\Object\Sport\Sport.cpp" />
     <ClCompile Include="Src\Application\Object\Tea\Bullet\Tea_Bullet.cpp" />
     <ClCompile Include="Src\Application\Object\Tea\Tea.cpp" />

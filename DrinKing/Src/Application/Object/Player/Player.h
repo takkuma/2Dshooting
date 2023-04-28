@@ -4,6 +4,7 @@
 
 class BasePlayer;
 
+
 enum Drink
 {
 	m_water,

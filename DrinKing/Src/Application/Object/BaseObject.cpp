@@ -24,3 +24,8 @@ void BaseObject::Pop()
 {
 
 }
+
+void BaseObject::OnHit()
+{
+
+}

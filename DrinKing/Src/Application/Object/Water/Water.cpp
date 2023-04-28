@@ -63,10 +63,6 @@ void Water::Update()
 	{
 		m_objList[i]->Update();
 	}
-
-	Math::Matrix transMat;
-	transMat = Math::Matrix::CreateTranslation(m_pos);
-	m_mat = transMat;
 }
 
 void Water::Draw()
