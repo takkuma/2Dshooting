@@ -1,17 +1,17 @@
 #pragma once
+
 #include "../BaseScene.h"
 
-class GameScene:public BaseScene
+class TitleScene :public BaseScene
 {
 public:
-	GameScene(){};
-	~GameScene(){};
+	TitleScene() {}
+	~TitleScene() { Release(); }
 
 	void Update()override;
 	void Draw()override;
 	void Init()override;
 	void Release()override;
+
 private:
-	static const int Tea_Num = 3;
-	static const int Beer_Num = 2;
 };

@@ -1,5 +1,10 @@
 #pragma once
+#include "BaseObject.h"
 //親クラス(基底クラス)
+
+class BaseObject;
+class GameScene;
+class Player;
 
 class BasePlayer
 {
@@ -17,7 +22,10 @@ public:
 
 	virtual Math::Vector3 GetPos() { return m_pos; }
 	virtual void SetPos(Math::Vector3 a_pos) { m_pos = a_pos; }
+
+	void SetgameScene(GameScene* a_gamescene) { m_gamescene = a_gamescene; }
 protected:
+	GameScene* m_gamescene;
 	//移動量
 	static const int Move_val = 5;
 

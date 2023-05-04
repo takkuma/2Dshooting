@@ -13,7 +13,8 @@ public:
 	void Draw()override;
 	void Init()override;
 	void Release()override;
+
 private:
-	static const int BulletNum = 10;
 	std::vector<std::shared_ptr<Water_Bullet>> m_objList;
+	static const int BulletNum = 10;
 };

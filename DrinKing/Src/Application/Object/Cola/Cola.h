@@ -15,6 +15,7 @@ public:
 	void Release()override;
 
 private:
+	static const int CoolTime = 180;
 	static const int BulletNum = 10;
 	std::vector<std::shared_ptr<Cola_Bullet>> m_objList;
 };

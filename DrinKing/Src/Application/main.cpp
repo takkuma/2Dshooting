@@ -1,8 +1,6 @@
 ﻿#include "main.h"
-#include"Object/Tea/Tea.h"
-#include"Object/Player/Player.h"
-#include"Object/Beer/Beer.h"
 #include "Scene/GameScene/GameScene.h"
+#include "Scene/TitleScene/titleScene.h"
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
 // エントリーポイント
@@ -51,17 +49,25 @@ void Application::PreUpdate()
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
 void Application::Update()
 {
-	m_scene->Update();
+	m_nowScene->Update();
 
-	//生ポインタ
-	//int* p;
-	//p = new int();
-	//delete p;
-
-	//スマートポインタ
-	//シェアードポインタ
-	//std::shared_ptr<int> sp;
-	//sp = std::make_shared<int>();
+	if (GetAsyncKeyState(VK_RETURN) & 0x8000)
+	{
+		if (!KeyFlg)
+		{
+			if (m_nowscene == SceneType::title)
+			{
+				m_nowscene = SceneType::game;
+				m_nowScene = std::make_shared<GameScene>();
+				m_nowScene->Init();
+				KeyFlg = true;
+			}
+		}
+	}
+	else
+	{
+		KeyFlg = false;
+	}
 }
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
@@ -140,7 +146,7 @@ void Application::PostDraw()
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
 void Application::DrawSprite()
 {
-	m_scene->Draw();
+	m_nowScene->Draw();
 }
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
@@ -194,11 +200,10 @@ bool Application::Init(int w, int h)
 	KdAudioManager::Instance().Init();
 
 	srand(timeGetTime());
-	m_scene = std::make_shared<GameScene>();
-	m_scene->Init();
-	//BaseObject* base = nullptr;
-	//アップキャスト
-	//base = enemy;
+	m_nowscene = SceneType::title;
+	m_nowScene = std::make_shared<TitleScene>();
+	m_nowScene->Init();
+	KeyFlg = false;
 
 	return true;
 }
@@ -305,7 +310,7 @@ void Application::Execute()
 // アプリケーション終了
 void Application::Release()
 {
-	m_scene->Release();
+	m_nowScene->Release();
 
 	KdInputManager::Instance().Release();
 

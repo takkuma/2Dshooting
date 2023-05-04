@@ -19,9 +19,11 @@ public:
 	void Init()override;
 	void Release()override;
 	void Pop()override;
-
+	void OnHit()override;
+	void OnHitBullet()override;
 private:
 	//•Ûç«E‰Â“Ç«E”Ä—p«
 	std::vector<std::shared_ptr<Tea_Bullet>>m_objList;
 	static const int BulletNum = 10;
+	static const int MaxCoolTime = 60;
 };

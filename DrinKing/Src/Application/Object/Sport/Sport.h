@@ -14,6 +14,7 @@ public:
 	void Init()override;
 	void Release()override;
 private:
-	static const int BulletNum = 30;
+	
 	std::vector<std::shared_ptr<Sport_Bullet>> m_objList;
+	static const int BulletNum = 30;
 };

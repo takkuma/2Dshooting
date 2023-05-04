@@ -1,9 +1,12 @@
 #pragma once
+
+class GameScene;
+
 class BaseBullet
 {
 public:
 	BaseBullet(){};
-	~BaseBullet() { Release(); };
+	~BaseBullet() { Release(); }
 
 	//仮想関数
 	virtual void Update() = 0;
@@ -14,7 +17,12 @@ public:
 	virtual void Shot(Math::Vector3 a_pos);
 	virtual bool GetFlg() { return m_flg; }
 
+	virtual void SetPos(Math::Vector3 a_pos) { m_pos = a_pos; }
+	virtual Math::Vector3 GetPos() { return m_pos; }
+
+	void Setgamescene(GameScene* a_gamescene) { m_gamescene = a_gamescene; }
 protected:
+	GameScene* m_gamescene;
 	//プレイヤー関係========================
 	//命名規則にキャメル型を採用
 	KdTexture m_tex;
@@ -23,4 +31,5 @@ protected:
 	bool m_flg;
 	float m_ang;
 	float m_deg;
+	float m_scale = 1;
 };

@@ -2,6 +2,7 @@
 #include"../BaseObject.h"
 
 class Beer_Bullet;
+class Player;
 
 class Beer:public BaseObject
 {
@@ -14,7 +15,8 @@ public:
 	void Init()override;
 	void Release()override;
 	void Pop()override;
-
+	void OnHit()override;
+	void OnHitBullet()override;
 private:
 	float m_deg;
 
@@ -22,4 +24,5 @@ private:
 	std::vector<std::shared_ptr<Beer_Bullet>>m_objList;
 
 	static const int BulletNum = 10;
+	static const int MaxCoolTime = 90;
 };

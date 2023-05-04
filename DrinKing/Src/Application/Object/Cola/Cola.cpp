@@ -4,13 +4,13 @@
 void Cola::Update()
 {
 	m_cooltime++;
-	if (m_cooltime > 30)
+	if (m_cooltime > CoolTime)
 	{
-		m_cooltime = 30;
+		m_cooltime = CoolTime;
 	}
 
 	//三方向発射
-	if (GetAsyncKeyState(VK_SPACE) & 0x8000 && m_cooltime == 30)
+	if (GetAsyncKeyState(VK_SPACE) & 0x8000 && m_cooltime == CoolTime)
 	{
 		for (int i = 0; i < m_objList.size(); i++)
 		{
@@ -80,10 +80,10 @@ void Cola::Draw()
 void Cola::Init()
 {
 	//プレイヤーの初期化
-	m_tex.Load("Asset/Textures/player_cola.png");
+	m_tex.Load("Asset/Textures/Object/player_cola.png");
 	m_pos = { -500,0,0 };
 	m_mat = Math::Matrix::Identity;
-	m_cooltime = 30;
+	m_cooltime = CoolTime;
 
 	//弾の初期化
 	std::shared_ptr<Cola_Bullet>colabullet;
@@ -91,6 +91,7 @@ void Cola::Init()
 	{
 		colabullet = std::make_shared<Cola_Bullet>();
 		colabullet->Init();
+		colabullet->Setgamescene(m_gamescene);
 		m_objList.push_back(colabullet);
 	}
 }

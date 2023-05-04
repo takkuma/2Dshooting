@@ -1,7 +1,7 @@
 ﻿#pragma once
 
 //前方宣言
-class GameScene;
+class BaseScene;
 
 //============================================================
 // アプリケーションクラス
@@ -51,7 +51,16 @@ private:
 	// ゲーム終了フラグ trueで終了する
 	bool		m_endFlag = false;
 
-	std::shared_ptr<GameScene> m_scene;
+	std::shared_ptr<BaseScene> m_nowScene;
+	bool KeyFlg;
+
+	enum class SceneType//保守性が上がる
+	{
+		title,
+		game
+	};
+
+	SceneType m_nowscene;
 
 //=====================================================
 // シングルトンパターン

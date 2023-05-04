@@ -1,7 +1,7 @@
 #pragma once
-#include"../../BaseBullet.h"
+#include "../../BaseBullet.h"
 
-class Water_Bullet :public BaseBullet
+class Water_Bullet : public BaseBullet
 {
 public:
 	Water_Bullet() {};

@@ -17,8 +17,9 @@ void BaseBullet::Shot(Math::Vector3 a_pos)
 {
 	if (!m_flg)
 	{
-		m_flg = true;
 		m_pos.x = a_pos.x;
 		m_pos.y = a_pos.y - 7;
+		m_scale = 1;
+		m_flg = true;
 	}
 }

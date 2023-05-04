@@ -1,20 +1,15 @@
 #pragma once
+#include"../BaseObject.h"
 
-class Back
+class Back :public BaseObject
 {
 public:
-	Back(){};
+	Back() {};
 	~Back() { Release(); };
-
-	void Update();
-	void Draw();
-	void Init();
-	void Release();
+	//メジャー関数
+	void Update()override;
+	void Draw()override;
+	void Init(int a);
+	void Release()override;
 private:
-	//画像
-	KdTexture m_tex;
-	//移動用
-	Math::Vector3 m_pos;
-	//行列
-	Math::Matrix m_mat;
 };

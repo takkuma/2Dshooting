@@ -79,7 +79,7 @@ void Sport::Draw()
 void Sport::Init()
 {
 	//ƒvƒŒƒCƒ„[‚Ì‰Šú‰»
-	m_tex.Load("Asset/Textures/player_sport.png");
+	m_tex.Load("Asset/Textures/Object/player_sport.png");
 	m_pos = { -500,0,0 };
 	m_mat = Math::Matrix::Identity;
 	m_cooltime = 10;
@@ -90,6 +90,7 @@ void Sport::Init()
 	{
 		sportbullet = std::make_shared<Sport_Bullet>();
 		sportbullet->Init();
+		sportbullet->Setgamescene(m_gamescene);
 		m_objList.push_back(sportbullet);
 	}
 }

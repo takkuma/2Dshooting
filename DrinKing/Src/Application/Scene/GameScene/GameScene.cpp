@@ -3,6 +3,7 @@
 #include "../../Object/Tea/Tea.h"
 #include "../../Object/Beer/Beer.h"
 #include "../../Object/MilkTea/MilkTea.h"
+#include "../../Object/Back/Back.h"
 
 void GameScene::Update()
 {
@@ -32,34 +33,46 @@ void GameScene::Init()
 	//©‹@‚Ì‰Šú‰»
 	std::shared_ptr<Player>player;
 	player = std::make_shared<Player>();
+	player->SetOwner(this);
 	player->Init();
+
+	//”wŒi‚Ì‰Šú‰»
+	std::shared_ptr<Back>back;
+	for (int i = 0; i < 2; i++)
+	{
+		back = std::make_shared<Back>();
+		back->Init(i);
+		m_objList.push_back(back);
+	}
 
 	//‚¨’ƒ“G‚Ì‰Šú‰»
 	std::shared_ptr<Tea>tea;
 	for (int i = 0; i < Tea_Num; i++)
 	{
 		tea = std::make_shared<Tea>();
+		tea->SetOwner(this);
 		tea->Init();
 		m_objList.push_back(tea);
 	}
-	
 
 	//ƒr[ƒ‹‚Ì‰Šú‰»
 	std::shared_ptr<Beer>beer;
 	for (int i = 0; i < Beer_Num; i++)
 	{
 		beer = std::make_shared<Beer>();
+		beer->SetOwner(this);
 		beer->Init();
 		m_objList.push_back(beer);
 	}
 
 	std::shared_ptr<Milk>milk;
-	
-	milk = std::make_shared<Milk>();
-	milk->Init();
-	m_objList.push_back(milk);
-	
-
+	for (int i = 0; i < 2; i++)
+	{
+		milk = std::make_shared<Milk>();
+		milk->SetOwner(this);
+		milk->Init();
+		m_objList.push_back(milk);
+	}
 	//•`‰æ‚ğŒã‚É‚·‚é‚à‚Ì‚ğŒã‚ë‚É‚·‚é
 	m_objList.push_back(player);
 }

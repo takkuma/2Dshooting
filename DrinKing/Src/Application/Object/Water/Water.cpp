@@ -79,7 +79,7 @@ void Water::Draw()
 void Water::Init()
 {
 	//ƒvƒŒƒCƒ„[‚Ì‰Šú‰»
-	m_tex.Load("Asset/Textures/player.png");
+	m_tex.Load("Asset/Textures/Object/player.png");
 	m_pos = { -500,0,0 };
 	m_mat = Math::Matrix::Identity;
 	m_cooltime = 30;
@@ -90,6 +90,7 @@ void Water::Init()
 	{
 		waterbullet = std::make_shared<Water_Bullet>();
 		waterbullet->Init();
+		waterbullet->Setgamescene(m_gamescene);
 		m_objList.push_back(waterbullet);
 	}
 }
