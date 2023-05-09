@@ -29,7 +29,7 @@ void Milk_Bullet::Update()
 				Math::Vector3 v = obj->GetPos() - m_pos;
 				if (v.Length() < 48)
 				{
-					//obj->OnHit();
+					obj->OnHit();
 					m_flg = false;
 				}
 			}

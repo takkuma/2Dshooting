@@ -1,6 +1,7 @@
 ﻿#include "main.h"
 #include "Scene/GameScene/GameScene.h"
 #include "Scene/TitleScene/titleScene.h"
+#include "Scene/ResultScene/ResultScene.h"
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
 // エントリーポイント
@@ -50,6 +51,7 @@ void Application::PreUpdate()
 void Application::Update()
 {
 	m_nowScene->Update();
+	
 
 	if (GetAsyncKeyState(VK_RETURN) & 0x8000)
 	{
@@ -62,12 +64,31 @@ void Application::Update()
 				m_nowScene->Init();
 				KeyFlg = true;
 			}
+			else if (m_nowscene == SceneType::game)
+			{
+				m_nowscene = SceneType::result;
+				m_nowScene = std::make_shared<ResultScene>();
+				m_nowScene->Init();
+				KeyFlg = true;
+			}
+			else if (m_nowscene == SceneType::result)
+			{
+				m_nowscene = SceneType::title;
+				m_nowScene = std::make_shared<TitleScene>();
+				m_nowScene->Init();
+				KeyFlg = true;
+			}
 		}
 	}
 	else
 	{
 		KeyFlg = false;
 	}
+
+	/*if (m_nowscene == SceneType::game)
+	{
+		m_nowscene = SceneType::result;
+	}*/
 }
 
 // ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// ///// /////
@@ -157,7 +178,7 @@ bool Application::Init(int w, int h)
 	//===================================================================
 	// ウィンドウ作成
 	//===================================================================
-	if (m_window.Create(w, h, "3D GameProgramming", "Window") == false) {
+	if (m_window.Create(w, h, "DrinKing", "Window") == false) {
 		MessageBoxA(nullptr, "ウィンドウ作成に失敗", "エラー", MB_OK);
 		return false;
 	}

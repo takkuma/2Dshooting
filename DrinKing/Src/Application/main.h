@@ -57,7 +57,8 @@ private:
 	enum class SceneType//保守性が上がる
 	{
 		title,
-		game
+		game,
+		result
 	};
 
 	SceneType m_nowscene;

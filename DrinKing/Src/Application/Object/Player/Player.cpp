@@ -6,6 +6,20 @@
 
 void Player::Update()
 {
+	if (GetAsyncKeyState('A') & 0x8000)
+	{
+		m_life = 3;
+		m_flg = true;
+	}
+
+
+	if (m_life <= 0)
+	{
+		m_flg = false;
+	}
+
+	if (!m_flg)return;
+
 	//モードチェンジ
 	m_cooltime--;
 	if (m_cooltime < 0)
@@ -19,6 +33,9 @@ void Player::Update()
 			else
 			{
 				drink = m_water;
+				std::shared_ptr<Water> water;
+				water = std::make_shared<Water>();
+				water->Init();
 				m_cooltime = 180;
 			}
 		}
@@ -29,10 +46,14 @@ void Player::Update()
 				if (drink == m_cola)
 				{
 					m_cooltime = 0;
+					
 				}
 				else
 				{
 					drink = m_cola;
+					std::shared_ptr<Cola> cola;
+					cola = std::make_shared<Cola>();
+					cola->Init();
 					m_cooltime = 180;
 				}
 			}	
@@ -44,10 +65,14 @@ void Player::Update()
 				if (drink == m_sport)
 				{
 					m_cooltime = 0;
+					
 				}
 				else
 				{
 					drink = m_sport;
+					std::shared_ptr<Sport> sport;
+					sport = std::make_shared<Sport>();
+					sport->Init();
 					m_cooltime = 180;
 				}
 			}
@@ -73,11 +98,15 @@ void Player::Update()
 	{
 		if (obj->GetObjType() == ObjectType::Enemy)
 		{
-			//playerとenemy
-			Math::Vector3 v = obj->GetPos() - m_pos;
-			if (v.Length() < 64)
+			if (obj->GetFlg())
 			{
-				obj->OnHit();
+				//playerとenemy
+				Math::Vector3 v = obj->GetPos() - m_pos;
+				if (v.Length() < 64)
+				{
+					obj->OnHit();
+					OnHit();
+				}
 			}
 		}
 	}
@@ -93,6 +122,7 @@ void Player::Draw()
 void Player::Init()
 {
 	m_rank = StartRnnk;
+	m_life = 3;
 
 	std::shared_ptr<Water> water;
 	water = std::make_shared<Water>();
@@ -127,4 +157,9 @@ void Player::Release()
 void Player::RankUp()
 {
 	m_rank -= 1;
+}
+
+void Player::OnHit()
+{
+	m_life--;
 }

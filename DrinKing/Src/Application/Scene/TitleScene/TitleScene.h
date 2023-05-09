@@ -14,4 +14,13 @@ public:
 	void Release()override;
 
 private:
+	KdTexture m_NameTex;
+	Math::Vector3 m_NamePos;
+	Math::Matrix m_NameMat;
+
+	KdTexture m_PushTex;
+	Math::Vector3 m_PushPos;
+	Math::Matrix m_PushMat;
+
+	float m_scale;
 };

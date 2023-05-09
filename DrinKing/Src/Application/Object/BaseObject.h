@@ -16,7 +16,7 @@ public:
 		Enemy,
 		P_Bullet,
 		E_Bullet,
-		Item,
+		UI,
 		Back,
 		None,
 	};
@@ -47,6 +47,8 @@ public:
 	virtual void RankUp();
 	virtual int GetRank() { return m_rank; }
 
+	virtual int GetLife() { return m_life; }
+
 protected:
 	GameScene* m_owner;
 	//ÉvÉåÉCÉÑÅ[ä÷åW========================
@@ -61,7 +63,8 @@ protected:
 	float m_deg;
 	float m_scale = 1;
 
-	int m_rank = 30;
+	int m_rank = 1;
+	int m_life = 3;
 
 	Math::Rectangle rc = { 0,0,64,64 };
 	ObjectType m_objType = ObjectType::None;

@@ -23,7 +23,7 @@ public:
 	void Release()override; 
 	void SetOwner(GameScene* a_owner) { m_owner = a_owner; }
 	void RankUp()override;
-	//void OnHit();
+	void OnHit()override;
 private:
 	int m_cooltime;
 	GameScene* m_owner;

@@ -14,4 +14,6 @@ public:
 private:
 	static const int Tea_Num = 3;
 	static const int Beer_Num = 2;
+
+	int m_life;
 };

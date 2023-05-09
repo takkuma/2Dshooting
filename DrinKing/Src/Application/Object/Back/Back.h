@@ -12,4 +12,7 @@ public:
 	void Init(int a);
 	void Release()override;
 private:
+	KdTexture m_BordTex;
+	Math::Vector3 m_BordPos;
+	Math::Matrix m_BordMat;
 };

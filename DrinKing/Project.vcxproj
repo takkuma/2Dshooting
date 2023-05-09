@@ -164,7 +164,11 @@
     <ClInclude Include="Src\Application\Object\Water\Water.h" />
     <ClInclude Include="Src\Application\Scene\BaseScene.h" />
     <ClInclude Include="Src\Application\Scene\GameScene\GameScene.h" />
+    <ClInclude Include="Src\Application\Scene\ResultScene\ResultScene.h" />
     <ClInclude Include="Src\Application\Scene\TitleScene\TitleScene.h" />
+    <ClInclude Include="Src\Application\UI\Life\Life.h" />
+    <ClInclude Include="Src\Application\UI\Mode\Mode.h" />
+    <ClInclude Include="Src\Application\UI\Rank\Rank.h" />
     <ClInclude Include="Src\Framework\Direct3D\KdMaterial.h" />
     <ClInclude Include="Src\Framework\Direct3D\Polygon\KdPolygon.h" />
     <ClInclude Include="Src\Framework\Direct3D\Polygon\KdSquarePolygon.h" />
@@ -221,7 +225,11 @@
     <ClCompile Include="Src\Application\Object\Water\Water.cpp" />
     <ClCompile Include="Src\Application\Scene\BaseScene.cpp" />
     <ClCompile Include="Src\Application\Scene\GameScene\GameScene.cpp" />
+    <ClCompile Include="Src\Application\Scene\ResultScene\ResultScene.cpp" />
     <ClCompile Include="Src\Application\Scene\TitleScene\TitleScene.cpp" />
+    <ClCompile Include="Src\Application\UI\Life\Life.cpp" />
+    <ClCompile Include="Src\Application\UI\Mode\Mode.cpp" />
+    <ClCompile Include="Src\Application\UI\Rank\Rank.cpp" />
     <ClCompile Include="Src\Framework\Direct3D\KdMaterial.cpp">
       <SubType>
       </SubType>

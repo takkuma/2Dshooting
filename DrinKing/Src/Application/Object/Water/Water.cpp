@@ -41,17 +41,17 @@ void Water::Update()
 
 
 	//‰æ–ÊŠO‚És‚©‚È‚¢‚æ‚¤‚É‚·‚é
-	if (m_pos.x > -160 - 32)
+	if (m_pos.x > 640 - 32)
 	{
-		m_pos.x = -160 - 32;
+		m_pos.x = 640 - 32;
 	}
 	if (m_pos.x < -640 + 32)
 	{
 		m_pos.x = -640 + 32;
 	}
-	if (m_pos.y > 360 - 32)
+	if (m_pos.y > 360 - 160)
 	{
-		m_pos.y = 360 - 32;
+		m_pos.y = 360 - 160;
 	}
 	if (m_pos.y < -360 + 32)
 	{

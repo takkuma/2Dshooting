@@ -5,7 +5,7 @@
 void Tea_Bullet::Update()
 {
 	if (!m_flg)return;
-	m_pos.x -= 5;
+	m_pos.x -= 7;
 
 	if (m_pos.x < -640 - 8)
 	{
@@ -27,7 +27,7 @@ void Tea_Bullet::Update()
 				Math::Vector3 v = obj->GetPos() - m_pos;
 				if (v.Length() < 40)
 				{
-					//obj->OnHit();
+					obj->OnHit();
 					m_flg = false;
 				}
 			}

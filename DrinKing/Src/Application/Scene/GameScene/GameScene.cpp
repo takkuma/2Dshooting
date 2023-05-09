@@ -4,6 +4,9 @@
 #include "../../Object/Beer/Beer.h"
 #include "../../Object/MilkTea/MilkTea.h"
 #include "../../Object/Back/Back.h"
+#include "../../UI/Life/Life.h"
+#include "../../UI/Rank/Rank.h"
+#include "../../UI/Mode/Mode.h"
 
 void GameScene::Update()
 {
@@ -44,6 +47,27 @@ void GameScene::Init()
 		back->Init(i);
 		m_objList.push_back(back);
 	}
+
+	//残機
+	std::shared_ptr<Life>life;
+	life = std::make_shared<Life>();
+	life->SetOwner(this);
+	life->Init();
+	m_objList.push_back(life);
+
+	//順位
+	std::shared_ptr<Rank>rank;
+	rank = std::make_shared<Rank>();
+	rank->SetOwner(this);
+	rank->Init();
+	m_objList.push_back(rank);
+
+	//プレイヤーのモードのUI
+	std::shared_ptr<Mode>mode;
+	mode = std::make_shared<Mode>();
+	mode->SetOwner(this);
+	mode->Init();
+	m_objList.push_back(mode);
 
 	//お茶敵の初期化
 	std::shared_ptr<Tea>tea;

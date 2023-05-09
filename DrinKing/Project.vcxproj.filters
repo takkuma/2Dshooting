@@ -118,6 +118,21 @@
     <Filter Include="Src\Application\Object\Back">
       <UniqueIdentifier>{4be76557-ffd2-4626-ae12-b63aaf9d1cf7}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\Application\UI">
+      <UniqueIdentifier>{b29036e9-91ba-4881-ba1c-8882676d5bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI\Life">
+      <UniqueIdentifier>{abe41238-3ae4-42e5-91d8-0ce46f1d00bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI\Rank">
+      <UniqueIdentifier>{131b1bb1-81a8-40ee-b0d8-1896bc593c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\UI\Mode">
+      <UniqueIdentifier>{c2aecbb0-ff46-445f-8135-6a418aa7108a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Scene\ResultScene">
+      <UniqueIdentifier>{a9078e51-e8cb-442d-9043-a53ea915d048}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -300,6 +315,18 @@
     <ClInclude Include="Src\Application\Object\Back\Back.h">
       <Filter>Src\Application\Object\Back</Filter>
     </ClInclude>
+    <ClInclude Include="Src\Application\UI\Life\Life.h">
+      <Filter>Src\Application\UI\Life</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\UI\Rank\Rank.h">
+      <Filter>Src\Application\UI\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\UI\Mode\Mode.h">
+      <Filter>Src\Application\UI\Mode</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Scene\ResultScene\ResultScene.h">
+      <Filter>Src\Application\Scene\ResultScene</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -460,6 +487,18 @@
     </ClCompile>
     <ClCompile Include="Src\Application\Object\BaseObject.cpp">
       <Filter>Src\Application\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\UI\Life\Life.cpp">
+      <Filter>Src\Application\UI\Life</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\UI\Rank\Rank.cpp">
+      <Filter>Src\Application\UI\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\UI\Mode\Mode.cpp">
+      <Filter>Src\Application\UI\Mode</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Scene\ResultScene\ResultScene.cpp">
+      <Filter>Src\Application\Scene\ResultScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

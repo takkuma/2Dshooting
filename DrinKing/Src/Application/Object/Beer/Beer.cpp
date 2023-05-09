@@ -115,7 +115,7 @@ void Beer::Pop()
 	{
 		if (rand() % 150 < 1)
 		{
-			m_pos = { 640 + 32,(rand() % 400) - 200.0f };
+			m_pos = { 640 + 32,(rand() % 360 - 64) - 200.0f };
 			m_deg = rand() % 360;
 			m_cooltime = MaxCoolTime;
 			m_flg = true;

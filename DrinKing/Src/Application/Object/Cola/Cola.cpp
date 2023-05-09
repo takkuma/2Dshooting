@@ -9,7 +9,7 @@ void Cola::Update()
 		m_cooltime = CoolTime;
 	}
 
-	//三方向発射
+	//貫通弾
 	if (GetAsyncKeyState(VK_SPACE) & 0x8000 && m_cooltime == CoolTime)
 	{
 		for (int i = 0; i < m_objList.size(); i++)
@@ -41,18 +41,18 @@ void Cola::Update()
 	}
 
 
-	//画面外に行かないようにする
-	if (m_pos.x > -160 - 32)
+	//規定外に行かないようにする
+	if (m_pos.x > 640 - 32)
 	{
-		m_pos.x = -160 - 32;
+		m_pos.x = 640 - 32;
 	}
 	if (m_pos.x < -640 + 32)
 	{
 		m_pos.x = -640 + 32;
 	}
-	if (m_pos.y > 360 - 32)
+	if (m_pos.y > 360 - 160)
 	{
-		m_pos.y = 360 - 32;
+		m_pos.y = 360 - 160;
 	}
 	if (m_pos.y < -360 + 32)
 	{
